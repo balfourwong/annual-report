@@ -1,5 +1,6 @@
 // jshint esversion: 6
 
+
 (function(){
     if (!('IntersectionObserver' in window)) {
         return;
