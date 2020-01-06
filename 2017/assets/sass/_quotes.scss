@@ -1,0 +1,93 @@
+.blockquote {
+  padding-top: 2.7em;
+  font-size: 1.3em;
+  font-weight: $body_typeface_black;
+  font-style: italic;
+  position: relative;
+  margin: 1.5em 0;
+  @media (min-width: $large-screen) {
+    padding-left: 2.7em;
+    padding-top: 0;
+    font-size: 1.9em;
+  }
+  &:before {
+    content:"\201C";
+    font-size: 102px;
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    font-style: normal;
+    @media (min-width: $large-screen) {
+      left: 0;
+      top: 0.3em;
+    }
+  }
+  p:last-of-type {
+    margin-bottom: 10px;
+  }
+  cite {
+    font-weight: $body_typeface_thin;
+    font-size: 0.526315789em; //20px
+    font-style: normal;
+  }
+}
+
+.blockquote--reversed {
+  background-color: $colour_black;
+  color: #fff;
+  margin: 1em 0 1.5em;
+  padding: 1.2em 0.8em;
+}
+
+.mission-blockquote {
+  background-color: transparent;
+  color: $colour_purple;
+  font-size: 2.5em;
+  line-height: 1.22em;
+  font-weight: $body_typeface_thin;
+  max-width: 18em;
+  font-style: normal;
+  position: relative;
+  padding: 0;
+  @media (min-width: $large-screen) {
+    margin-left: 4em;
+    margin-right: 1em;
+  }
+  &:before,
+  &:after {
+    content:"";
+    height: 36px;
+    width: 54px;
+    background-image: url('../img/sparkle.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -45px;
+    left: 0;
+    @media (min-width: $large-screen) {
+      top: 5px;
+      left: -60px;
+    }
+  }
+  &:after {
+    top: 20px;
+    right: -25px;
+    left: auto;
+    height: 24px;
+    width: 36px;
+  }
+}
+
+.blockquote--smaller {
+  font-size: 1em;
+  @media (min-width: $large-screen) {
+    padding-left: 1.5em;
+  }
+  &:before {
+    font-size: 40px;
+    top: 0;
+  }
+  cite {
+    font-size: 0.9em;
+  }
+}
